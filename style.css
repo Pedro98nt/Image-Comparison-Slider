@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.images div{
+  height: 100vh;
+}
+
+.layer1{
+  background: red;
+  width: 100%;
+}
+
+.layer2{
+  width: 50%;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.split{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 20px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: col-resize;
+  z-index: 999999;
+}

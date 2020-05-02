@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pedro</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="images">
+      <div class="layer1"></div>
+      <span class="split"></span>
+      <div class="layer2"></div>
+    </div>
+  </body>
+
+  <script>
+    var split = document.querySelector(".split");
+    var layer = document.querySelector(".layer2");
+    let isClicked = false;
+    var x;
+    split.addEventListener("mousedown", function(e){
+      isClicked = true;
+    });
+
+    split.addEventListener("mousemove", function(e){
+      if(isClicked){
+        x = e.clientX;
+        split.style.left = x + "px";
+        layer.style.width = x + "px";
+        console.log(x+" ok");
+      }
+    });
+
+    split.addEventListener("mouseup", function(e){
+      isClicked = false;
+    });
+  </script>
+</html>
